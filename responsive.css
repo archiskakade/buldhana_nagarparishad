@@ -1154,3 +1154,155 @@
     object-fit: cover !important;
     object-position: center bottom !important;
 }
+/* =========================================================
+   FIX CITY IMAGE
+   320px - 480px
+========================================================= */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .city-decoration {
+        display: block !important;
+
+        width: 100% !important;
+        height: 50px !important;
+
+        margin: 5px 0 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
+        left: 0 !important;
+        right: auto !important;
+
+        transform: none !important;
+
+        overflow: hidden !important;
+
+        z-index: 10 !important;
+
+        line-height: 0 !important;
+    }
+
+    .city-decoration img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 50px !important;
+
+        max-width: none !important;
+
+        object-fit: cover !important;
+        object-position: center bottom !important;
+    }
+}
+/* =========================================================
+   FIXED CITY + BOTTOM NAVIGATION
+   SAME ON ALL DEVICES
+========================================================= */
+
+/* City Skyline */
+.city-decoration {
+    position: fixed !important;
+
+    left: 0 !important;
+    bottom: 60px !important;
+
+    width: 100% !important;
+    height: 50px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: block !important;
+
+    overflow: hidden !important;
+
+    z-index: 9998 !important;
+
+    background: #ffffff !important;
+
+    line-height: 0 !important;
+
+    transform: none !important;
+}
+
+.city-decoration img {
+    display: block !important;
+
+    width: 100% !important;
+    height: 50px !important;
+
+    max-width: none !important;
+
+    object-fit: fill !important;
+    object-position: center center !important;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.bottom-navigation {
+    position: fixed !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: 60px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+
+    border-radius: 0 !important;
+
+    z-index: 9999 !important;
+
+    overflow: hidden !important;
+}
+
+
+/* Navigation items */
+.bottom-nav-item {
+    width: 100% !important;
+    height: 60px !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 2px !important;
+}
+
+
+/* Navigation icons */
+.bottom-nav-item i {
+    font-size: 18px !important;
+}
+
+
+/* Navigation text */
+.bottom-nav-item {
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   KEEP CONTENT ABOVE FIXED AREA
+========================================================= */
+
+.services-section {
+    padding-bottom: 110px !important;
+}
