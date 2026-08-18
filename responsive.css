@@ -1,0 +1,1126 @@
+/* =========================================================
+   BULDHANA MUNICIPAL COUNCIL
+   RESPONSIVE CSS
+========================================================= */
+
+/* =========================================================
+   DESKTOP RESPONSIVE
+   769px AND ABOVE
+========================================================= */
+
+@media (min-width: 769px) {
+
+    /* =========================
+       PAGE
+    ========================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .top-header {
+        width: 200%;
+        max-width: 1400px;
+
+        margin: 0 auto;
+
+        height: 90px;
+        min-height: 90px;
+
+        padding: 5px 25px;
+
+        border-radius: 0 0 18px 18px;
+    }
+
+    .header-person {
+        width: 100px;
+        height: 85px;
+    }
+
+    .header-title h1 {
+        font-size: 30px;
+    }
+
+    .header-title p {
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero-section {
+        width: calc(100% - 24px);
+        max-width: 1400px;
+
+        height: 330px;
+        min-height: 330px;
+
+        margin: 10px auto 0;
+
+        border-radius: 15px;
+    }
+
+    .hero-building {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-building img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        /* Building slightly right */
+        object-position: 68% center;
+    }
+
+    .hero-text {
+        width: 45%;
+
+        padding-left: 35px;
+        padding-bottom: 20px;
+    }
+
+    .welcome-text {
+        font-size: 14px;
+    }
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       CITIZEN BANNER
+    ========================= */
+
+    .citizen-banner {
+        width: calc(100% - 60px);
+        max-width: 1320px;
+
+        min-height: 68px;
+
+        margin: 14px auto 12px;
+
+        padding: 10px 18px;
+
+        border-radius: 15px;
+    }
+
+    .banner-icon {
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+
+        font-size: 19px;
+    }
+
+    .banner-content h3 {
+        font-size: 14px;
+    }
+
+    .banner-content p {
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       NOTICE
+    ========================= */
+
+    .notice-section {
+        width: calc(100% - 60px);
+        max-width: 1320px;
+
+        min-height: 40px;
+
+        margin: 0 auto 15px;
+    }
+
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-section {
+        width: calc(100% - 60px);
+        max-width: 1320px;
+
+        margin: 0 auto;
+    }
+
+    .section-heading {
+        margin: 12px 0 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .heading-line {
+        width: 65px;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .service-card {
+        min-height: 120px;
+
+        padding: 14px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+
+        min-width: 60px;
+
+        font-size: 24px;
+    }
+
+    .service-info {
+        padding-left: 12px;
+        padding-right: 30px;
+    }
+
+    .service-info h3 {
+        font-size: 15px;
+    }
+
+    .service-info p {
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       CITY IMAGE
+    ========================= */
+
+     .city-decoration {
+        display: none !important;
+        width: 100vw !important;
+        height: 80px !important;
+
+        margin: 8px 0 0 !important;
+
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+
+        overflow: hidden !important;
+
+        z-index: 1 !important;
+    }
+
+    .city-decoration img {
+        width: 100% !important;
+        height: 80px !important;
+
+        max-width: none !important;
+
+        object-fit: cover !important;
+        object-position: center bottom !important;
+    }
+
+    /* =========================
+       BOTTOM NAVIGATION
+    ========================= */
+
+    .bottom-navigation {
+        position: fixed !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        transform: none !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        height: 60px !important;
+
+        border-radius: 0 !important;
+
+        border: 1px solid #eeeeee !important;
+
+        z-index: 9999 !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+
+        overflow: hidden !important;
+    }
+      .bottom-nav-item {
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 13px !important;
+    }
+
+    .bottom-nav-item i {
+        font-size: 20px !important;
+    }
+}
+/* =========================================================
+   TABLET
+   481px - 768px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .top-header {
+        height: 100px;
+        min-height: 100px;
+
+        padding: 4px 14px;
+    }
+
+    .header-person {
+        width: 72px;
+        height: 72px;
+    }
+
+    .header-title h1 {
+        font-size: 27px;
+    }
+
+    .header-title p {
+        font-size: 11px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        height: 250px;
+
+        border-radius: 12px;
+    }
+
+    .hero-building img {
+        object-position: 68% center;
+    }
+
+    .hero-section::after {
+        width: 62%;
+    }
+
+    .hero-text {
+        width: 55%;
+
+        padding-left: 25px;
+        padding-bottom: 20px;
+    }
+
+    .welcome-text {
+        font-size: 12px;
+    }
+
+    .hero-text h2 {
+        font-size: 29px;
+    }
+
+    .hero-text p {
+        font-size: 10px;
+    }
+
+
+    /* Banner */
+
+    .citizen-banner {
+        width: calc(100% - 30px);
+
+        min-height: 62px;
+    }
+
+
+    /* Notice */
+
+    .notice-section {
+        width: calc(100% - 30px);
+    }
+
+
+    /* Services */
+
+    .services-section {
+        width: calc(100% - 30px);
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .service-card {
+        min-height: 105px;
+
+        padding: 8px;
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+
+        min-width: 50px;
+
+        font-size: 20px;
+    }
+
+    .service-info {
+        padding-left: 8px;
+        padding-right: 24px;
+    }
+
+    .service-info h3 {
+        font-size: 12px;
+    }
+
+    .service-info p {
+        font-size: 8px;
+    }
+
+
+    /* City */
+
+    .city-decoration {
+        height: 65px;
+    }
+
+
+    /* Bottom */
+
+    .bottom-navigation {
+        width: calc(100% - 25px);
+
+        height: 55px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   376px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .top-header {
+        width: 100%;
+
+        height: 85px;
+        min-height: 75px;
+
+        padding: 3px 6px;
+
+        border-radius: 0 0 12px 12px;
+    }
+
+    .header-person {
+        width: 68px;
+        height: 40px;
+    }
+
+    .header-title {
+        padding: 0 4px;
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+
+        line-height: 1.15;
+
+        white-space: nowrap;
+    }
+
+    .header-title p {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero-section {
+        width: calc(100% - 12px);
+
+        height: 155px;
+
+        margin: 6px auto 0;
+
+        border-radius: 12px;
+    }
+
+    .hero-building {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-building img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        /* Building right side */
+        object-position: 68% center;
+    }
+
+    .hero-section::after {
+        width: 66%;
+
+        background: linear-gradient(
+            90deg,
+            rgba(255,255,255,0.97) 0%,
+            rgba(255,255,255,0.90) 42%,
+            rgba(255,255,255,0.35) 72%,
+            rgba(255,255,255,0) 100%
+        );
+    }
+
+    .hero-section::before {
+        left: -8%;
+
+        bottom: -55px;
+
+        width: 120%;
+        height: 90px;
+
+        transform: rotate(-4deg);
+    }
+
+    .hero-content {
+        height: 100%;
+
+        align-items: flex-start;
+    }
+
+    .hero-text {
+        width: 55%;
+
+        padding-left: 14px;
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+
+    .welcome-text {
+        font-size: 8px;
+
+        margin-bottom: 3px;
+    }
+
+    .hero-text h2 {
+        font-size: 19px;
+
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 7px;
+
+        margin-top: 4px;
+    }
+
+
+    /* =====================================================
+       CITIZEN BANNER
+    ===================================================== */
+
+    .citizen-banner {
+    width: calc(100% - 28px);
+
+    min-height: 65px;
+
+    margin: 8px auto 9px;
+
+    padding: 9px 10px;
+}
+
+    .banner-icon {
+        width: 37px;
+        height: 37px;
+
+        min-width: 37px;
+
+        font-size: 16px;
+    }
+
+    .banner-content {
+        padding-left: 8px;
+    }
+
+    .banner-content h3 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+    .banner-content p {
+    font-size: 12px;
+    line-height: 1.3;
+    margin-top: 3px;
+}
+
+    .banner-button {
+        width: 25px;
+        height: 25px;
+
+        min-width: 25px;
+
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       NOTICE
+    ===================================================== */
+
+    .notice-section {
+        width: calc(100% - 28px);
+
+        min-height: 34px;
+
+        margin: 0 auto 8px;
+
+        border-radius: 7px;
+    }
+
+   .notice-label {
+    height: 38px;
+    min-width: 82px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+    .notice-message {
+    padding-left: 10px;
+
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+    .notice-dot {
+        width: 5px;
+        height: 5px;
+
+        margin-right: 7px;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .services-section {
+        width: calc(100% - 20px);
+
+        margin: 0 auto;
+
+        padding: 0;
+    }
+
+    .section-heading {
+        gap: 6px;
+
+        margin: 7px 0 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+    }
+
+    .heading-line {
+        width: 32px;
+
+        height: 2px;
+    }
+
+
+    /* EXACTLY 3 CARDS PER ROW */
+
+    .services-grid {
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 7px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* Card */
+
+   .service-card {
+        min-height: 120px !important;
+
+        padding: 7px 4px !important;
+
+        border-radius: 11px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+    }
+
+    .service-icon {
+        width: 43px !important;
+        height: 43px !important;
+
+        min-width: 43px !important;
+
+        font-size: 18px !important;
+
+        margin-bottom: 4px !important;
+    }
+
+    .service-info {
+        width: 100% !important;
+
+        padding: 0 3px !important;
+    }
+
+    .service-info h3 {
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .service-info p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+
+    margin-top: 2px;
+}
+
+    .service-arrow {
+        width: 18px;
+        height: 18px;
+
+        right: 3px;
+
+        font-size: 6px;
+    }
+
+
+    /* =====================================================
+       CITY IMAGE
+    ===================================================== */
+
+  .city-decoration {
+    width: 100vw !important;
+    height: 65px !important;
+
+    margin: 5px 0 0 !important;
+    padding: 0 !important;
+
+    position: relative !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    overflow: hidden !important;
+    line-height: 0 !important;
+}
+
+    .city-decoration img {
+    width: 100% !important;
+    height: 65px !important;
+
+    max-width: none !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center bottom !important;
+}
+
+
+    /* =====================================================
+       BOTTOM NAVIGATION
+    ===================================================== */
+
+  .bottom-navigation {
+        position: fixed !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        transform: none !important;
+
+        width: 100% !important;
+        height: 52px !important;
+
+        border-radius: 0 !important;
+
+        z-index: 9999 !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+
+        overflow: hidden !important;
+    }
+
+    .bottom-nav-item {
+        width: 100% !important;
+        height: 100% !important;
+
+        font-size: 10px !important;
+    }
+
+    .bottom-nav-item i {
+        font-size: 17px !important;
+    }
+
+    .bottom-nav-item.active::after {
+        width: 28px;
+
+        bottom: 3px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 375px
+========================================================= */
+
+@media (max-width: 375px) {
+
+    .top-header {
+        height: 85px;
+        min-height: 70px;
+    }
+
+    .header-person {
+        width: 65px;
+        height: 50px;
+    }
+
+    .header-title h1 {
+        font-size: 20px;
+    }
+
+    .header-title p {
+        font-size: 6px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        height: 130px;
+    }
+
+    .hero-text {
+        padding-left: 11px;
+        padding-top: 13px;
+    }
+
+    .welcome-text {
+        font-size: 7px;
+    }
+
+    .hero-text h2 {
+        font-size: 17px;
+    }
+
+    .hero-text p {
+        font-size: 6px;
+    }
+
+
+    /* Banner */
+
+    .citizen-banner {
+        width: calc(100% - 22px);
+
+        min-height: 54px;
+        
+    }
+
+    .banner-icon {
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+    }
+
+    .banner-content h3 {
+        font-size: 8px;
+    }
+
+    .banner-content p {
+        font-size: 6px;
+    }
+
+
+    /* Notice */
+
+    .notice-section {
+        width: calc(100% - 22px);
+
+        min-height: 38px;
+    }
+
+    .notice-label {
+        min-width: 64px;
+
+        height: 32px;
+
+        font-size: 8px;
+    }
+
+
+    /* Services */
+
+    /* ==========================================
+   SMALL MOBILE - COMPACT SERVICES
+   320px - 375px
+========================================== */
+
+@media (max-width: 375px) {
+
+    .services-section {
+        width: calc(100% - 12px) !important;
+        margin: 0 auto !important;
+    }
+
+    .section-heading {
+        margin: 4px 0 6px !important;
+        min-height: 25px !important;
+        gap: 5px !important;
+    }
+
+    .section-heading h2 {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+    }
+
+    .heading-line {
+        width: 24px !important;
+        height: 2px !important;
+    }
+
+    /* 3 cards x 3 rows */
+    .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 4px !important;
+    }
+
+    /* Smaller card height */
+     .service-card {
+        min-height: 83px !important;
+        height: 83px !important;
+        padding: 5px 3px !important;
+    }
+
+
+    /* Smaller icons */
+    .service-icon {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        font-size: 14px !important;
+        margin-bottom: 2px !important;
+    }
+
+    /* Card heading */
+    .service-info {
+        width: 100% !important;
+        padding: 0 2px !important;
+    }
+
+    .service-info h3 {
+        font-size: 10px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Card subtitle */
+    .service-info p {
+        font-size: 7px !important;
+        line-height: 1.1 !important;
+        margin-top: 1px !important;
+    }
+
+    /* Arrow */
+    .service-arrow {
+        width: 15px !important;
+        height: 15px !important;
+        right: 2px !important;
+        font-size: 5px !important;
+    }
+
+    /* City image */
+     .city-decoration {
+        height: 60px !important;
+        margin: 2px 0 0 !important;
+    }
+
+    .city-decoration img {
+        width: 100% !important;
+        height: 60px !important;
+        object-fit: cover !important;
+        object-position: center bottom !important;
+    }
+
+    /* Bottom navigation */
+    
+   .bottom-navigation {
+        position: fixed !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        transform: none !important;
+
+        width: 100% !important;
+        height: 52px !important;
+
+        border-radius: 0 !important;
+
+        z-index: 9999 !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+
+        overflow: hidden !important;
+    }
+
+    .bottom-nav-item {
+        font-size: 9px !important;
+        gap: 1px !important;
+    }
+
+    .bottom-nav-item i {
+        font-size: 16px !important;
+    }
+}
+
+
+    /* City */
+
+    .city-decoration {
+        height: 50px;
+    }
+
+
+    /* Bottom */
+
+    .bottom-navigation {
+        width: calc(100% - 8px);
+
+        height: 49px;
+
+        bottom: 3px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL
+   BELOW 320px
+========================================================= */
+
+@media (max-width: 319px) {
+
+    .header-title h1 {
+        font-size: 15px;
+    }
+
+    .hero-section {
+        height: 120px;
+    }
+
+    .hero-text h2 {
+        font-size: 15px;
+    }
+
+    .service-card {
+        min-height: 82px;
+    }
+
+    .service-icon {
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+
+        font-size: 15px;
+    }
+
+    .service-info h3 {
+        font-size: 7.5px;
+    }
+
+    .service-info p {
+        font-size: 5px;
+    }
+
+    .city-decoration {
+        height: 46px;
+    }
+}
