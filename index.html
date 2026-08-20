@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>बुलढाणा नगर परिषद</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#f58220">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+
+<body>
+  
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-header">
+
+
+    <!-- LEFT PERSON -->
+
+    <div class="header-person left-person">
+
+        <img src="images/left-person.png"
+             alt="नगर परिषद">
+
+    </div>
+
+
+    <!-- HEADER TITLE -->
+
+    <div class="header-title">
+
+        <h1>
+            बुलढाणा नगर परिषद
+        </h1>
+
+        <p>
+            सर्व नागरिक सेवा - एकाच ठिकाणी
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT PERSON -->
+
+    <div class="header-person right-person">
+
+        <img src="images/right-person.png"
+             alt="नगर परिषद">
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero-section">
+
+
+    <div class="hero-content">
+
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-text">
+
+            <span class="welcome-text">
+                आपले स्वागत आहे 👋
+            </span>
+
+
+            <h2>
+                स्वच्छ, सुंदर आणि
+                <br>
+                <strong>स्मार्ट बुलढाणा</strong>
+            </h2>
+
+
+            <p>
+                नागरिकांच्या सेवेसाठी सदैव तत्पर...
+            </p>
+
+        </div>
+
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="hero-building">
+
+            <img src="images/building-1.png"
+                 alt="बुलढाणा नगर परिषद इमारत">
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CITIZEN SERVICE BANNER
+===================================================== -->
+
+<section class="citizen-banner">
+
+
+    <div class="banner-icon">
+
+        <i class="fa-solid fa-bullhorn"></i>
+
+    </div>
+
+
+    <div class="banner-content">
+
+        <h3>
+            नागरिकांच्या सोयीसाठी सर्व सेवा एकाच क्लिकवर
+        </h3>
+
+        <p>
+            आपला विभाग निवडा आणि सेवा वापरा
+        </p>
+
+    </div>
+
+
+    <button class="banner-button"
+            onclick="showServices()">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+    </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     NOTICE BAR
+===================================================== -->
+
+<section class="notice-section">
+
+
+    <div class="notice-label">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <span>
+            ताज्या सूचना
+        </span>
+
+    </div>
+
+
+    <div class="notice-message">
+
+        <span>नवीन ऑनलाइन नागरिक सेवा आता उपलब्ध आहेत.</span>
+
+    </div>
+
+
+    <div class="notice-dot"></div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES SECTION
+===================================================== -->
+
+<section class="services-section"
+         id="services">
+
+
+    <!-- SECTION TITLE -->
+
+    <div class="section-heading">
+
+        <span class="heading-line"></span>
+
+        <h2>
+            सेवा आणि माहिती
+        </h2>
+
+        <span class="heading-line"></span>
+
+    </div>
+
+
+
+    <!-- SERVICES GRID -->
+
+    <div class="services-grid">
+
+
+        <!-- ==============================
+             SERVICE 1
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('complaint')">
+
+
+            <div class="service-icon pink">
+
+                <i class="fa-solid fa-comments"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    तक्रार नोंदवा
+                </h3>
+
+                <p>
+                    ऑनलाइन तक्रार करा
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 2
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('property')">
+
+
+            <div class="service-icon green">
+
+                <i class="fa-solid fa-house"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    मालमत्ता कर
+                </h3>
+
+                <p>
+                    मालमत्ता कर भरा
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 3
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('water')">
+
+
+            <div class="service-icon blue">
+
+                <i class="fa-solid fa-droplet"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    पाणीपुरवठा
+                </h3>
+
+                <p>
+                    पाणी पुरवठा माहिती
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 4
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('cleaning')">
+
+
+            <div class="service-icon yellow">
+
+                <i class="fa-solid fa-trash-can"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    स्वच्छता व्यवस्था
+                </h3>
+
+                <p>
+                    स्वच्छता संबंधित माहिती
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 5
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('birth')">
+
+
+            <div class="service-icon purple">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    जन्म-मृत्यू दाखला
+                </h3>
+
+                <p>
+                    प्रमाणपत्र मिळवा
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 6
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('home')">
+
+
+            <div class="service-icon pink2">
+
+                <i class="fa-solid fa-clipboard-check"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    घरपोच सेवा
+                </h3>
+
+                <p>
+                    सेवेची माहिती
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 7
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('citizen')">
+
+
+            <div class="service-icon cyan">
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    नागरिक सुविधा
+                </h3>
+
+                <p>
+                    महापालिका सेवा
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 8
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('notice')">
+
+
+            <div class="service-icon orange">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    महत्त्वाच्या सूचना
+                </h3>
+
+                <p>
+                    नवीन अपडेट
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==============================
+             SERVICE 9
+        =============================== -->
+
+        <div class="service-card"
+             onclick="openService('contact')">
+
+
+            <div class="service-icon brown">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </div>
+
+
+            <div class="service-info">
+
+                <h3>
+                    संपर्क
+                </h3>
+
+                <p>
+                    महापालिकेशी संपर्क
+                </p>
+
+            </div>
+
+
+            <div class="service-arrow">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- =====================================================
+     CITY DECORATION
+===================================================== -->
+
+<div class="city-decoration" aria-hidden="true">
+
+    <img
+        src="images/city.png"
+        alt=""
+    >
+
+</div>
+
+<!-- =====================================================
+     BOTTOM NAVIGATION
+===================================================== -->
+
+<nav class="bottom-navigation">
+
+
+    <!-- HOME -->
+
+    <a href="#"
+       class="bottom-nav-item active">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+            मुख्यपृष्ठ
+        </span>
+
+    </a>
+
+
+
+    <!-- SERVICES -->
+
+    <a href="#services"
+       class="bottom-nav-item">
+
+        <i class="fa-solid fa-grip"></i>
+
+        <span>
+            सेवा
+        </span>
+
+    </a>
+
+
+
+    <!-- NOTIFICATION -->
+
+    <a href="#"
+       class="bottom-nav-item notification-nav">
+
+        <div class="notification-icon">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span class="notification-count">
+                3
+            </span>
+
+        </div>
+
+        <span>
+            सूचना
+        </span>
+
+    </a>
+
+
+
+    <!-- INFORMATION -->
+
+    <a href="#"
+       class="bottom-nav-item">
+
+        <i class="fa-regular fa-file-lines"></i>
+
+        <span>
+            माहिती
+        </span>
+
+    </a>
+
+
+
+    <!-- MORE -->
+
+    <a href="#"
+       class="bottom-nav-item">
+
+        <i class="fa-solid fa-bars"></i>
+
+        <span>
+            अधिक
+        </span>
+
+    </a>
+
+
+</nav>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
