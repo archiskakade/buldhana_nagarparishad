@@ -828,55 +828,7 @@ if ("serviceWorker" in navigator) {
     });
 
 }
-/* =========================================================
-   APP SPLASH SCREEN
-   SHOW ONLY WHEN PWA APP IS OPENED
-========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const splash =
-        document.getElementById("appSplashScreen");
-
-    if (!splash) {
-        return;
-    }
-
-
-    /* Check if website is opened as installed app */
-
-    const isStandalone =
-        window.matchMedia("(display-mode: standalone)").matches ||
-        window.navigator.standalone === true;
-
-
-    /* Normal Chrome/browser website
-       → Do NOT show splash */
-
-    if (!isStandalone) {
-
-        splash.remove();
-
-        return;
-    }
-
-
-    /* Installed App
-       → Show splash for 3 seconds */
-
-    setTimeout(function () {
-
-        splash.classList.add("hide");
-
-        setTimeout(function () {
-
-            splash.remove();
-
-        }, 500);
-
-    }, 3000);
-
-});
 // ==========================================
 // SERVICE WORKER REGISTRATION
 // ==========================================
