@@ -298,35 +298,55 @@
 @media (min-width: 481px) and (max-width: 768px) {
 
     .top-header {
+        width: 100%;
         height: 100px;
         min-height: 100px;
-
         padding: 4px 14px;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .header-person {
         width: 72px;
         height: 72px;
+        flex-shrink: 0;
+    }
+
+    .header-title {
+        min-width: 0;
+        flex: 1;
+        text-align: center;
+        overflow: hidden;
     }
 
     .header-title h1 {
         font-size: 27px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .header-title p {
         font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
 
-    /* Hero */
+    /* ================= HERO ================= */
 
     .hero-section {
+        width: 100%;
         height: 250px;
-
         border-radius: 12px;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
     .hero-building img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         object-position: 68% center;
     }
 
@@ -336,9 +356,9 @@
 
     .hero-text {
         width: 55%;
-
         padding-left: 25px;
         padding-bottom: 20px;
+        box-sizing: border-box;
     }
 
     .welcome-text {
@@ -354,81 +374,303 @@
     }
 
 
-    /* Banner */
+    /* ================= BANNER ================= */
 
     .citizen-banner {
         width: calc(100% - 30px);
-
+        max-width: 100%;
         min-height: 62px;
+        box-sizing: border-box;
     }
 
 
-    /* Notice */
+    /* ================= NOTICE ================= */
 
     .notice-section {
         width: calc(100% - 30px);
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
 
-    /* Services */
+    /* ================= SERVICES ================= */
 
     .services-section {
         width: calc(100% - 30px);
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .services-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
     }
 
     .service-card {
+        min-width: 0;
         min-height: 105px;
-
         padding: 8px;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .service-icon {
         width: 50px;
         height: 50px;
-
         min-width: 50px;
-
         font-size: 20px;
+        flex-shrink: 0;
     }
 
     .service-info {
+        min-width: 0;
         padding-left: 8px;
         padding-right: 24px;
+        overflow: hidden;
     }
 
     .service-info h3 {
         font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .service-info p {
         font-size: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
 
-    /* City */
+    /* ================= CITY ================= */
 
     .city-decoration {
+        width: 100%;
         height: 65px;
+        overflow: hidden;
     }
 
 
-    /* Bottom */
+    /* ================= BOTTOM NAVIGATION ================= */
 
     .bottom-navigation {
         width: calc(100% - 25px);
-
+        max-width: 100%;
         height: 55px;
+        box-sizing: border-box;
     }
 }
 
 
+/* =========================================================
+   ASUS ZENBOOK FOLD / LARGE TABLET
+   769px - 1200px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    /* ================= HEADER ================= */
+
+    .top-header {
+        width: 100%;
+        max-width: 100%;
+        height: 100px;
+        min-height: 100px;
+        padding: 5px 18px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .header-person {
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+        flex-shrink: 0;
+    }
+
+    .header-title {
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+        padding: 0 15px;
+        text-align: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .header-title h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: 27px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .header-title p {
+        width: 100%;
+        font-size: 11px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero-section {
+        width: 100%;
+        height: 250px;
+        max-width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .hero-building {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .hero-building img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .hero-section::after {
+        width: 62%;
+    }
+
+    .hero-text {
+        width: 55%;
+        max-width: 55%;
+        padding-left: 25px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .welcome-text {
+        font-size: 12px;
+    }
+
+    .hero-text h2 {
+        font-size: 29px;
+    }
+
+    .hero-text p {
+        font-size: 10px;
+    }
+
+
+    /* ================= BANNER ================= */
+
+    .citizen-banner {
+        width: calc(100% - 30px);
+        max-width: calc(100% - 30px);
+        min-height: 62px;
+        box-sizing: border-box;
+    }
+
+
+    /* ================= NOTICE ================= */
+
+    .notice-section {
+        width: calc(100% - 30px);
+        max-width: calc(100% - 30px);
+        box-sizing: border-box;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services-section {
+        width: calc(100% - 30px);
+        max-width: calc(100% - 30px);
+        box-sizing: border-box;
+    }
+
+    .services-grid {
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 105px;
+        padding: 8px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+
+    .service-info {
+        flex: 1;
+        min-width: 0;
+        padding-left: 8px;
+        padding-right: 20px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .service-info h3 {
+        max-width: 100%;
+        font-size: 12px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .service-info p {
+        max-width: 100%;
+        font-size: 8px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* ================= CITY ================= */
+
+    .city-decoration {
+        width: 100%;
+        height: 65px;
+        overflow: hidden;
+    }
+
+
+    /* ================= BOTTOM NAVIGATION ================= */
+
+    .bottom-navigation {
+        width: calc(100% - 25px);
+        max-width: calc(100% - 25px);
+        height: 55px;
+        box-sizing: border-box;
+    }
+}
 /* =========================================================
    MOBILE
    376px - 480px
