@@ -2,27 +2,229 @@
    BULDHANA NAGAR PARISHAD
    MAIN JAVASCRIPT
 ========================================================= */
+/* =========================================================
+   BULDHANA NAGAR PARISHAD
+   PWA INSTALL POPUP
+========================================================= */
+
+let deferredPrompt = null;
 
 
 /* =========================================================
-   SHOW SERVICES
+   GET BROWSER INSTALL PROMPT
 ========================================================= */
 
-function showServices() {
+window.addEventListener("beforeinstallprompt", function (event) {
 
-    const servicesSection =
-        document.getElementById("services");
+    console.log("beforeinstallprompt received");
 
-    if (servicesSection) {
+    event.preventDefault();
 
-        servicesSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+    deferredPrompt = event;
+
+});
+
+
+/* =========================================================
+   SHOW INSTALL POPUP
+========================================================= */
+
+function showInstallPopup() {
+
+    // Mobile / responsive view only
+    if (window.innerWidth > 768) {
+        return;
+    }
+
+    // Do not show if already installed
+    if (
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.navigator.standalone === true
+    ) {
+        return;
+    }
+
+    // Do not create duplicate popup
+    if (document.getElementById("installPopup")) {
+        return;
+    }
+
+    const popup = document.createElement("div");
+
+    popup.id = "installPopup";
+
+    popup.innerHTML = `
+        <div class="install-overlay">
+
+            <div class="install-box">
+
+                <button
+                    class="install-close"
+                    id="installCloseButton">
+                    ×
+                </button>
+
+                <div class="install-icon">
+                    <img
+                        src="icons/icon-192.png"
+                        alt="Buldhana Nagar Parishad">
+                </div>
+
+                <h3>बुलढाणा नगर परिषद</h3>
+
+                <p>
+                    नागरिक सेवांचा जलद आणि सोपा वापर करण्यासाठी
+                    आमचे App Install करा.
+                </p>
+
+                <button
+                    class="install-btn"
+                    id="installAppButton">
+                    📲 Install App
+                </button>
+
+                <button
+                    class="install-later"
+                    id="installLaterButton">
+                    Later
+                </button>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(popup);
+
+
+    /* Close button */
+
+    document
+        .getElementById("installCloseButton")
+        .addEventListener("click", function () {
+
+            closeInstallPopup();
+
         });
+
+
+    /* Later button */
+
+    document
+        .getElementById("installLaterButton")
+        .addEventListener("click", function () {
+
+            closeInstallPopup();
+
+        });
+
+
+    /* Install button */
+
+    document
+        .getElementById("installAppButton")
+        .addEventListener("click", installApp);
+
+}
+
+
+/* =========================================================
+   INSTALL APP
+========================================================= */
+
+async function installApp() {
+
+    console.log("INSTALL BUTTON CLICKED");
+
+    if (!deferredPrompt) {
+
+        alert(
+            "App install karne ke liye browser ke address bar me Install icon par click karein."
+        );
+
+        return;
+    }
+
+    try {
+
+        await deferredPrompt.prompt();
+
+        const result = await deferredPrompt.userChoice;
+
+        console.log("Install result:", result.outcome);
+
+        if (result.outcome === "accepted") {
+
+            console.log("App installed successfully");
+
+        } else {
+
+            console.log("User cancelled installation");
+
+        }
+
+        deferredPrompt = null;
+
+        closeInstallPopup();
+
+    } catch (error) {
+
+        console.error("Installation error:", error);
+
+    }
+}
+
+/* =========================================================
+   CLOSE POPUP
+========================================================= */
+
+function closeInstallPopup() {
+
+    const popup =
+        document.getElementById("installPopup");
+
+    if (popup) {
+
+        popup.remove();
 
     }
 
 }
+
+
+/* =========================================================
+   SHOW POPUP AFTER PAGE LOAD
+========================================================= */
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        showInstallPopup();
+
+    }, 1500);
+
+});
+
+
+/* =========================================================
+   APP INSTALLED
+========================================================= */
+
+window.addEventListener("appinstalled", function () {
+
+    console.log(
+        "Buldhana Nagar Parishad App Installed"
+    );
+
+    deferredPrompt = null;
+
+    closeInstallPopup();
+
+});
+/* =========================================================
+   SHOW SERVICES
+========================================================= */
 
 function openService(serviceName) {
 
@@ -460,6 +662,22 @@ document.addEventListener("DOMContentLoaded", function () {
     highlightColor: "#ffffff",
 
     subtitleColor: "#ffffff"
+    },
+    // Slide 2
+    {
+        image: "images/slide-1.png",
+
+        welcome: "सेवा सोपी, शहर सुंदर,",
+
+        heading:  "एक क्लिक,",
+
+        highlight: "अनेक सेवा",
+
+        subtitle: "तुमची सेवा निवडा",
+
+        headingColor: "#315d2b",
+        highlightColor: "#e85b0b",
+        subtitleColor: "#555"
     }
    
 ];
@@ -594,3 +812,98 @@ welcomeText.style.textShadow =
     }, 3000);
 
 });
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", function () {
+
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(function () {
+                console.log("Service Worker Registered");
+            })
+            .catch(function (error) {
+                console.log("Service Worker Error:", error);
+            });
+
+    });
+
+}
+/* =========================================================
+   APP SPLASH SCREEN
+   SHOW ONLY WHEN PWA APP IS OPENED
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const splash =
+        document.getElementById("appSplashScreen");
+
+    if (!splash) {
+        return;
+    }
+
+
+    /* Check if website is opened as installed app */
+
+    const isStandalone =
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.navigator.standalone === true;
+
+
+    /* Normal Chrome/browser website
+       → Do NOT show splash */
+
+    if (!isStandalone) {
+
+        splash.remove();
+
+        return;
+    }
+
+
+    /* Installed App
+       → Show splash for 3 seconds */
+
+    setTimeout(function () {
+
+        splash.classList.add("hide");
+
+        setTimeout(function () {
+
+            splash.remove();
+
+        }, 500);
+
+    }, 3000);
+
+});
+// ==========================================
+// SERVICE WORKER REGISTRATION
+// ==========================================
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", function () {
+
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(function (registration) {
+
+                console.log(
+                    "Service Worker Registered:",
+                    registration.scope
+                );
+
+            })
+            .catch(function (error) {
+
+                console.error(
+                    "Service Worker Registration Failed:",
+                    error
+                );
+
+            });
+
+    });
+
+}
